@@ -28,6 +28,7 @@ export default class Index extends React.Component {
     return JSON.parse(localStorage.getItem('postProduct')).map((value, index) => {
       return <Product
         key={index}
+        id={value.id}
         title={value.title}
         img={value.images[5].url}
         price={value.offerData.offers[0].price}

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 export default class Product extends React.Component {
   constructor(props) {
@@ -14,6 +15,9 @@ export default class Product extends React.Component {
         </ImageContainer>
         <p>{this.props.title}</p>
         {this.props.price}
+        <Link href={{ pathname: '/detail', query:{id: this.props.id} }}>
+          click
+        </Link>
       </Elem>
     )
   }
