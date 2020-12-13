@@ -20,16 +20,20 @@ export default class Product extends React.Component {
 }
 
 const Elem = styled.div`
-  width: 100%;
+  padding: 10px;
   border: 1px solid red; 
+  background-color: white;
 `
 
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
-  /* background-color: #e6e6e6; */
+  height: 200px;
+  border: 1px solid blue;
 `
 
 const Image = styled.img`
-    max-width: 100px;
+  max-width: 200px;
+  max-height: 200px; 
+  border: 1px solid green;
 `

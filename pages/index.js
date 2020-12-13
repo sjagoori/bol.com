@@ -38,7 +38,7 @@ export default class Index extends React.Component {
   render() {
     console.warn('render:', this.state.state)
     return (
-    <Layout>
+      <Layout>
         {this.state.state ? this.generateProducts() : <div>Loading</div>}
       </Layout>
     )

@@ -1,8 +1,9 @@
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export default function Layout(props) {
   return (
     <Container>
+      <GlobalStyle />
       {props.children}
     </Container>
   )
@@ -11,9 +12,18 @@ export default function Layout(props) {
 const Container = styled.div`
   margin-left: 50%;
   transform: translateX(-50%);
-  width: 70vw;
+  width: 60vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   border: 1px solid black; 
+`;
+
+const GlobalStyle = createGlobalStyle`
+  body{
+      padding:0;
+      margin:0;
+      /* background-color: #e6e6e6; */
+  }
 `;
