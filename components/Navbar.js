@@ -39,7 +39,7 @@ const Container = styled.div`
   z-index: 1;
 
   div {
-    border-right: .5px solid grey;
+    border-right: .5px solid #0000a4;
     display: flex; 
     align-items: center;
     justify-content: space-around;
