@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 import Layout from '../components/Layout'
 import Product from '../components/Product'
 import { getData, getProducts, filterObject } from '../components/utils'
@@ -39,9 +40,22 @@ export default class Index extends React.Component {
   render() {
     console.warn('render:', this.state.state)
     return (
-      <Layout>
-        {this.state.state ? this.generateProducts() : <div>Loading</div>}
-      </Layout>
+      <>
+        <Navbar
+          links={{
+            link1: { label: 'Link', url: '#' },
+            link2: { label: 'Link', url: '#' },
+            link3: { label: 'Link', url: '#' },
+            link4: { label: 'Link', url: '#' },
+            link5: { label: 'Link', url: '#' },
+          }}
+          cta={{ label: 'CTA', url: '#' }}
+        />
+        
+        <Layout>
+          {this.state.state ? this.generateProducts() : <div>Loading</div>}
+        </Layout>
+      </>
     )
   }
 }
