@@ -10,7 +10,6 @@ export default class Button extends React.Component {
   }
 
   render() {
-    console.log(this.props.url)
     return (
       <ThemeProvider theme={theme}>
         <Link href={this.props.url}>
@@ -32,7 +31,7 @@ const Container = styled.div`
   span {
     margin-left: -10px;
 
-    :first-child{
+    :first-child {
       margin-right: 5px;
     }
   }
@@ -63,7 +62,4 @@ const Container = styled.div`
     margin-right: 15px;
     transition:  opacity .1s ease-in-out;
   }
-`
-const InnerLink = styled.div`
-
 `
