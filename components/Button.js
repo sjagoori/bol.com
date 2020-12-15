@@ -14,8 +14,8 @@ export default class Button extends React.Component {
       <ThemeProvider theme={theme}>
         <Link href={this.props.url}>
           <Container type={this.props.type}>
-              <Icon />
-              <span>{this.props.label}</span>
+            <Icon />
+            <span>{this.props.label}</span>
           </Container>
         </Link>
       </ThemeProvider>
