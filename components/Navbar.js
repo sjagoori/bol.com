@@ -38,6 +38,14 @@ const Container = styled.div`
   z-index: 1;
   filter: drop-shadow(3px 4px 4px #cccccc25);
 
+  :hover{
+    div:last-child{
+      a:before{
+        opacity: 1
+      }
+    }
+  }
+
   div {
     display: flex; 
     align-items: center;
@@ -46,32 +54,34 @@ const Container = styled.div`
     max-width: 1000px;
     padding-left: 20px;
     padding-right: 20px;
-
+    
     a {
       cursor: pointer;
       padding-left: 20px;
       padding-right: 20px;
-      margin-right: 10px;
+      margin-right: 15px;
       margin-left: -15px;
       text-decoration: none;
       color: black;
       padding-right: 20px;
       border-right: 1px solid black;
-
+      
       &:last-child {
         border: 0;
+        margin-right: 10px;
       }
-
+      
       &::before {
         content: 'ᐅ';
-        padding-left: 5px;
+        margin-left: -10px;
         padding-right: 5px;
         opacity: 0;
         transition:  opacity .3s ease-in-out;
       }
-
+      
       &:hover {
         color:#0000a4;
+        
         &::before {
           opacity: 1;
         }
@@ -79,7 +89,6 @@ const Container = styled.div`
     }
 
   &:last-child {
-    padding: 0;
     border-left: .5px solid grey;
     height: 70%;
     justify-content: center;
@@ -87,24 +96,26 @@ const Container = styled.div`
     transition: .3s;
     margin-right: 1em;
     border-radius: 5px;
-
+    
     & a {
-        margin-left: -15px;
-        padding: 0 2em 0;
+        text-align: center;
+        width: 100px;
+        padding: 0 0 0;
+        color: white;
+
+      &::before {
+        margin-left: -5px;
+        margin-right: 5px;
+      }
     }
     
     &:active{
       background-color: #2137FF70;
       box-shadow: inset -2px 0px 4px #00000035;
-
       & a {
-        color: #FFFFFF;
+        color: #000;
       }
-    }
-
-    & a {
-      color: white;
     }
   }
 }
-` 
+`
