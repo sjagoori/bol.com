@@ -23,7 +23,6 @@ export default class Navbar extends React.Component {
 }
 
 const Container = styled.div`
-  /* border: 1px solid #0000a4; */
   background-color: #FFFFFF;
   position: fixed;
   top: 40px;
@@ -37,10 +36,9 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  filter: drop-shadow(3px 4px 4px rgba(179, 179, 179, 0.25));
+  filter: drop-shadow(3px 4px 4px #cccccc25);
 
   div {
-    /* border-right: .5px solid #0000a4; */
     display: flex; 
     align-items: center;
     justify-content: space-around;
@@ -83,22 +81,21 @@ const Container = styled.div`
   &:last-child {
     padding: 0;
     border-left: .5px solid grey;
-    /* width: 150px; */
     height: 70%;
     justify-content: center;
     background-color: #0000a4;
     transition: .3s;
-    margin-right: 1vw;
+    margin-right: 1em;
     border-radius: 5px;
 
     & a {
         margin-left: -15px;
-        padding: 0 2vw 0;
+        padding: 0 2em 0;
     }
     
-    &:hover{
+    &:active{
       background-color: #2137FF70;
-      box-shadow: inset -2px 0px 4px rgba(0, 0, 0, 0.35);
+      box-shadow: inset -2px 0px 4px #00000035;
 
       & a {
         color: #FFFFFF;
