@@ -35,7 +35,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid grey;
   border-radius: 10px;
   background-color: ${props => {
     if (props.type == 'primary') return props.theme.colors.primary;
