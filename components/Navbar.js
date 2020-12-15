@@ -38,15 +38,8 @@ const Container = styled.div`
   z-index: 1;
   filter: drop-shadow(3px 4px 4px #cccccc25);
 
-  :hover{
-    div:last-child{
-      a:before{
-        opacity: 1
-      }
-    }
-  }
-
   div {
+    cursor: pointer;
     display: flex; 
     align-items: center;
     justify-content: space-around;
@@ -55,8 +48,15 @@ const Container = styled.div`
     padding-left: 20px;
     padding-right: 20px;
     
+    :hover{
+      :last-child{
+        a:before{
+          opacity: 1
+        }
+      }
+    }
+
     a {
-      cursor: pointer;
       padding-left: 20px;
       padding-right: 20px;
       margin-right: 15px;
