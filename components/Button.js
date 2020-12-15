@@ -40,12 +40,12 @@ const Container = styled.div`
     if (props.type == 'primary') return props.theme.colors.primary;
     if (props.type == 'secondary') return props.theme.colors.secondary;
   }};
-`
-const InnerLink = styled.div`
-  text-decoration: none;
-  text-transform: capitalize;
-  color: ${props => props.theme.colors.white};
-  margin-right: 15px;
+
+:hover{
+     svg {
+      opacity: 1;
+    }
+  }
 
   svg{
     fill: white;
@@ -53,10 +53,10 @@ const InnerLink = styled.div`
     margin-right: 10px;
     transition:  opacity .1s ease-in-out;
   }
-  
-  :hover{
-     svg {
-      opacity: 1;
-    }
-  }
+`
+const InnerLink = styled.div`
+  text-decoration: none;
+  text-transform: capitalize;
+  color: ${props => props.theme.colors.white};
+  margin-right: 15px;
 `
