@@ -10,23 +10,33 @@ export default class Button extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    console.log(this.props.url)
     return (
       <ThemeProvider theme={theme}>
-        <Container type={this.props.type}>
-          <Link href={this.props.url}>
-            <InnerLink>
+        <Link href={this.props.url}>
+          <Container type={this.props.type}>
               <span><Icon /></span>
               <span>{this.props.label}</span>
-            </InnerLink>
-          </Link>
-        </Container>
+          </Container>
+        </Link>
       </ThemeProvider>
     )
   }
 }
 
 const Container = styled.div`
+  text-decoration: none;
+  text-transform: capitalize;
+  color: ${props => props.theme.colors.white};
+  
+  span {
+    margin-left: -10px;
+
+    :first-child{
+      margin-right: 5px;
+    }
+  }
+
   cursor: pointer;
   display: block;
   width: 150px;
@@ -41,7 +51,7 @@ const Container = styled.div`
     if (props.type == 'secondary') return props.theme.colors.secondary;
   }};
 
-:hover{
+  :hover{
      svg {
       opacity: 1;
     }
@@ -50,13 +60,10 @@ const Container = styled.div`
   svg{
     fill: white;
     opacity: 0;
-    margin-right: 10px;
+    margin-right: 15px;
     transition:  opacity .1s ease-in-out;
   }
 `
 const InnerLink = styled.div`
-  text-decoration: none;
-  text-transform: capitalize;
-  color: ${props => props.theme.colors.white};
-  margin-right: 15px;
+
 `
