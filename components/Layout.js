@@ -29,10 +29,13 @@ const Container = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+  
   body{
       padding:0;
       margin:0;
       padding-top: 140px;
       background-color: #FBF1F4;
+      font-family: 'Open Sans', sans-serif;
   }
 `;
