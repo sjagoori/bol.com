@@ -10,14 +10,22 @@ export default function Layout(props) {
 }
 
 const Container = styled.div`
-  margin-left: 50%;
-  transform: translateX(-50%);
-  width: 60vw;
+  margin: 0 auto;
+  width: 70%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  border: 1px solid black; 
+  grid-row-gap: 40px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`
