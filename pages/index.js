@@ -11,21 +11,19 @@ export default class Index extends React.Component {
   }
 
   async componentDidMount() {
-    console.warn('componentDidMount:', this.state.state)
     this.setState({ products: await getProducts('https://bol-helper.herokuapp.com/v1') })
     localStorage.getItem('postProduct') == null ? this.setProducts() : (JSON.parse(localStorage.getItem('postProduct')), this.setState({ state: true }))
   }
 
   async setProducts() {
-    console.warn('setProducts:', this.state.state)
     let preProduct = this.state.products.map(async key => Promise.resolve(await getData(key)))
     let postProduct = filterObject(await Promise.all(preProduct))
-    localStorage.setItem('postProduct', JSON.stringify(postProduct))
+
+    localStorage.setItem('postProduct', JSON.stringify(filterObject(postProduct.map(key => key.offerData.offers ? key : false))))
     this.setState({ products: postProduct, state: true })
   }
 
   generateProducts() {
-    console.warn('generateProducts:', this.state.state)
     return JSON.parse(localStorage.getItem('postProduct')).map((value, index) => {
       return <Product
         key={index}
@@ -39,7 +37,6 @@ export default class Index extends React.Component {
   }
 
   render() {
-    console.warn('render:', this.state.state)
     return (
       <>
         <Navbar
