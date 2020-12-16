@@ -36,19 +36,19 @@ const Elem = styled.div`
   padding-bottom: 25px;
   
   border-radius: 5px;
-  background-color: white;
+  background-color: ${props => props.theme.colors.white};;
   
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
-  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 3px ${props => props.theme.colors.black +'25'});
   transition: .3s;
 
   :hover{
     border: 0;
-    filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(4px 4px 20px ${props => props.theme.colors.black +'25'});
   }
 `
 
@@ -74,8 +74,8 @@ const BuyButton = styled.div`
   padding: 2px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #000;
-  color: white; 
+  background-color: ${props => props.theme.colors.black};
+  color: ${props => props.theme.colors.white};
 
   display: flex;
   flex-direction: column;
