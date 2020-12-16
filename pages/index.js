@@ -29,6 +29,7 @@ export default class Index extends React.Component {
     return JSON.parse(localStorage.getItem('postProduct')).map((value, index) => {
       return <Product
         key={index}
+        varriant={index % 3}
         id={value.id}
         title={value.title}
         img={value.images[5].url}
@@ -51,7 +52,6 @@ export default class Index extends React.Component {
           }}
           cta={{ label: 'CTA', url: '#' }}
         />
-        
         <Layout>
           {this.state.state ? this.generateProducts() : <div>Loading</div>}
         </Layout>
