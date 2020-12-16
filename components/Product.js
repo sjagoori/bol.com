@@ -13,7 +13,7 @@ export default class Product extends React.Component {
     return (
       <ThemeProvider theme={theme}>
 
-        <Elem varriant={this.props.varriant}>
+        <Container varriant={this.props.varriant}>
           <Title>{this.props.title}</Title>
 
           <ImageContainer>
@@ -25,16 +25,16 @@ export default class Product extends React.Component {
           <Link href={{ pathname: '/detail', query: { id: this.props.id } }}>
             <BuyButton>Bekijk product</BuyButton>
           </Link>
-        </Elem>
+        </Container>
 
       </ThemeProvider>
     )
   }
 }
 
-const Elem = styled.div`
+const Container = styled.div`
   width: 100%;
-  height: 230px;
+  height: 250px;
   padding-top: 25px;
   padding-bottom: 25px;
   
@@ -58,6 +58,7 @@ const Elem = styled.div`
 const Title = styled.span`
   max-width: 80%;
   max-height: 1.2em;
+  margin-bottom: 10px;
   text-align: center;
 
   text-overflow: ellipsis;
@@ -92,6 +93,8 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   max-height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   span span{
     min-width: 60px;
