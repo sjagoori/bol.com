@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styled, { ThemeProvider } from 'styled-components';
 import theme from '../styling/theme'
+import Badge from '@material-ui/core/Badge'
 
 export default class Product extends React.Component {
   constructor(props) {
@@ -16,7 +17,9 @@ export default class Product extends React.Component {
           <Title>{this.props.title}</Title>
 
           <ImageContainer>
-            <Image src={this.props.img} />
+            <Badge badgeContent={this.props.price} color="error">
+              <Image src={this.props.img} />
+            </Badge>
           </ImageContainer>
 
           <Link href={{ pathname: '/detail', query: { id: this.props.id } }}>
@@ -89,6 +92,14 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   max-height: 200px;
+
+  span span{
+    min-width: 60px;
+
+    :before{
+      content: '€'
+    }
+  }
 `
 
 const Image = styled.img`
