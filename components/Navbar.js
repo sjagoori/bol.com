@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from 'react'
 import Link from 'next/link'
+
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -23,11 +24,10 @@ export default class Navbar extends React.Component {
 }
 
 const Container = styled.div`
-  border: 1px solid #0000a4;
-  background-color: white;
+  background-color: #FFFFFF;
   position: fixed;
   top: 40px;
-  border-radius: 50px;
+  border-radius: 5px;
   overflow: hidden;
   height: 60px;
   width: 95%;
@@ -37,9 +37,10 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  filter: drop-shadow(3px 4px 4px #cccccc25);
 
   div {
-    border-right: .5px solid #0000a4;
+    cursor: pointer;
     display: flex; 
     align-items: center;
     justify-content: space-around;
@@ -47,32 +48,41 @@ const Container = styled.div`
     max-width: 1000px;
     padding-left: 20px;
     padding-right: 20px;
+    
+    :hover{
+      :last-child{
+        a:before{
+          opacity: 1
+        }
+      }
+    }
 
     a {
-      cursor: pointer;
       padding-left: 20px;
       padding-right: 20px;
-      margin-right: 10px;
+      margin-right: 15px;
       margin-left: -15px;
       text-decoration: none;
       color: black;
       padding-right: 20px;
       border-right: 1px solid black;
-
+      
       &:last-child {
         border: 0;
+        margin-right: 10px;
       }
-
+      
       &::before {
         content: 'ᐅ';
-        padding-left: 5px;
+        margin-left: -10px;
         padding-right: 5px;
         opacity: 0;
         transition:  opacity .3s ease-in-out;
       }
-
+      
       &:hover {
         color:#0000a4;
+        
         &::before {
           opacity: 1;
         }
@@ -80,28 +90,33 @@ const Container = styled.div`
     }
 
   &:last-child {
-    padding: 0;
     border-left: .5px solid grey;
-    width: 150px;
+    height: 70%;
     justify-content: center;
     background-color: #0000a4;
     transition: .3s;
-
-    & a {
-        margin-left: -15px;
-    }
+    margin-right: 1em;
+    border-radius: 5px;
     
-    &:hover{
-      background-color: #EDF4FF;
+    & a {
+        text-align: center;
+        width: 100px;
+        padding: 0 0 0;
+        color: white;
 
-      & a {
-        color: #0000a4;
+      &::before {
+        margin-left: -5px;
+        margin-right: 5px;
       }
     }
-
-    & a {
-      color: white;
+    
+    &:active{
+      background-color: #2137FF70;
+      box-shadow: inset -2px 0px 4px #00000035;
+      & a {
+        color: #000;
+      }
     }
   }
 }
-` 
+`
