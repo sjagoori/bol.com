@@ -4,5 +4,6 @@ export default {
     secondary: "#36308F",
     black: "#1D1D1D",
     white: "white"
-  }
+  },
+  backgroundColor:'#FBF1F4'
 }

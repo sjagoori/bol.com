@@ -1,11 +1,14 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import theme from '../styling/theme'
 
 export default function Layout(props) {
   return (
-    <Container>
-      <GlobalStyle />
-      {props.children}
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <GlobalStyle />
+        {props.children}
+      </Container>
+    </ThemeProvider>
   )
 }
 
@@ -35,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
       padding:0;
       margin:0;
       padding-top: 140px;
-      background-color: #FBF1F4;
+      background-color: ${props => props.theme.backgroundColor};
       font-family: 'Open Sans', sans-serif;
   }
 `;
