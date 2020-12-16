@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import Product from '../components/Product'
 import { getData, getProducts, filterObject } from '../components/utils'
 import LinearProgress from '@material-ui/core/LinearProgress'
+import styled from 'styled-components'
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -12,7 +13,6 @@ export default class Index extends React.Component {
   }
 
   async componentDidMount() {
-    localStorage.clear();
     this.setState({ products: await getProducts('https://bol-helper.herokuapp.com/v1') })
     localStorage.getItem('postProduct') == null ? this.setProducts() : (JSON.parse(localStorage.getItem('postProduct')), this.setState({ state: true }))
   }
@@ -52,9 +52,14 @@ export default class Index extends React.Component {
           cta={{ label: 'CTA', url: '#' }}
         />
         <Layout>
-          {this.state.state ? this.generateProducts() : <div><LinearProgress color="secondary" /></div>}
+          {this.state.state ? this.generateProducts() : <Loader><LinearProgress color="secondary" /></Loader>}
         </Layout>
       </>
     )
   }
 }
+
+const Loader = styled.div`
+  width: 100%;
+  grid-column: 1 / 4;
+`
