@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from 'react'
 import Link from 'next/link'
+import Icon from '../assets/svg/logo'
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -11,10 +12,14 @@ export default class Navbar extends React.Component {
     return (
       <Container>
         <div>
+          <Icon />
+        </div>
+        Bol.com Deals
+        {/* <div>
           {Object.keys(this.props.links).map((key, index) => {
             return <Link href={this.props.links[key].url}>{this.props.links[key].label}</Link>
           })}
-        </div>
+        </div> */}
         <div>
           <Link href={this.props.cta.url}>{this.props.cta.label}</Link>
         </div>

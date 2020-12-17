@@ -49,7 +49,7 @@ export default class Index extends React.Component {
             link4: { label: 'Link', url: '#' },
             link5: { label: 'Link', url: '#' },
           }}
-          cta={{ label: 'CTA', url: '#' }}
+          cta={{ label: 'Source', url: 'https://github.com/sjagoori/bol.com' }}
         />
         <Layout>
           {this.state.state ? this.generateProducts() : <Loader><LinearProgress color="secondary" /></Loader>}
