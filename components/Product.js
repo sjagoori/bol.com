@@ -75,24 +75,6 @@ const Title = styled.span`
   font-weight: bold;
 `
 
-const BuyButton = styled.div`
-  cursor: pointer;
-  height: 30px;
-  width: 150px;
-  padding: 2px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: ${props => props.theme.colors.black};
-  color: ${props => props.theme.colors.white};
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 5px;
-`
-
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
