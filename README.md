@@ -12,11 +12,11 @@
 <div style="text-align:center"><img src="screenshot.png" alt="screenshot of the project" width="600"/></div>
 
 ## 📓 Description
-Bol.com Deals is a website that finds, and provides deals from [bol.com]('https://www.bol.com/). 
+Bol.com Deals is a website that finds, and provides deals from [bol.com](https://www.bol.com/). 
 
 
 ## 💻 Live demo
-[Link](https://frontend-apps.vercel.app/)
+[Link](https://bol-com-git-master.sjagoori.vercel.app/)
 
 
 ## 🤖 Installation
