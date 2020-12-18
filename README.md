@@ -21,11 +21,11 @@ Bol.com Deals is a website that finds, and provides deals from [bol.com](https:/
 
 ## 🤖 Installation
 **Run the project:**
-1. Install dependencies
+1. Install dependencies  
 `npm install`
-2. Set API key in .env file
-`echo 'API_KEY={Your_Key' > .env`
-3. Run project
+2. Set API key in .env file   
+`echo 'API_KEY={Your_Key}' > .env`
+3. Run project   
 `npm run dev`
 
 
@@ -33,4 +33,5 @@ Bol.com Deals is a website that finds, and provides deals from [bol.com](https:/
 [React](https://github.com/facebook/react)  
 [NextJS](https://nextjs.org/)   
 [Styled-components](https://styled-components.com/)   
-[@material-ui/core](https://material-ui.com/)
+[@material-ui/core](https://material-ui.com/)   
+[Dotenv](https://github.com/motdotla/dotenv)   
