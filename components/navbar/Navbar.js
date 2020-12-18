@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from 'styled-components';
+import theme from '../../styling/theme'
 import React from 'react'
 import Link from 'next/link'
 import Icon from '../../assets/svg/logo'
@@ -10,21 +11,23 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <Container>
-        <div>
-          <Icon />
-        </div>
-        <strong>Bol.com Deals</strong>
-        <div>
-          <Link href={this.props.cta.url}>{this.props.cta.label}</Link>
-        </div>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Container>
+          <div>
+            <Icon />
+          </div>
+          <strong>Bol.com Deals</strong>
+          <div>
+            <Link href={this.props.cta.url}>{this.props.cta.label}</Link>
+          </div>
+        </Container>
+      </ThemeProvider>
     )
   }
 }
 
 const Container = styled.div`
-  background-color: #FFFFFF;
+  background-color:  ${props => props.theme.colors.white};
   position: fixed;
   top: 40px;
   border-radius: 5px;
@@ -37,7 +40,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  filter: drop-shadow(3px 4px 4px #cccccc25);
+  filter: drop-shadow(3px 4px 4px  ${props => props.theme.colors.grey} + '25');
 
   div {
     cursor: pointer;
@@ -111,11 +114,8 @@ const Container = styled.div`
     }
     
     &:active{
-      background-color: #2137FF70;
-      box-shadow: inset -2px 0px 4px #00000035;
-      & a {
-        color: #000;
-      }
+      filter: brightness(200%);
+      box-shadow: inset -2px 0px 4px ${props => props.theme.colors.black} + '35';
     }
   }
 }

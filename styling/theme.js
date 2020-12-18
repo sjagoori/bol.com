@@ -4,8 +4,9 @@ export default {
     secondary: "#1D1D1D",
     black: "#1D1D1D",
     white: "white",
+    grey: "CCCCCC",
     red: "red",
-    green: "#27cb73"
+    green: "#27CB73"
   },
   backgroundColor:'#FBF1F4'
 }
