@@ -1,30 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bol.com Deals
 
-## Getting Started
+<table style="margin-left: auto; margin-right: auto;">
+    <tr>
+        <td align="center"><a href="#-live-demo">💻 Live demo<a></td>
+        <td align="center"><a href="#-Description">📓 Description<a></td>
+        <td align="center"><a href="#-installation">🤖 Installation<a></td>
+        <td align="center"><a href="#-sources">🤝 Dependencies<a></td>
+    </tr>
+</table>
 
-First, run the development server:
+<div style="text-align:center"><img src="screenshot.png" alt="screenshot of the project" width="600"/></div>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 📓 Description
+Bol.com Deals is a website that finds, and provides deals from [bol.com]('https://www.bol.com/). 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 💻 Live demo
+[Link](https://frontend-apps.vercel.app/)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 🤖 Installation
+**Run the project:**
+1. Install dependencies
+`npm install`
+2. Run project
+`npm run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🤝 Dependencies
+[React](https://github.com/facebook/react)  
+[NextJS](https://nextjs.org/)   
+[Styled-components](https://styled-components.com/)
+[@material-ui/core](https://material-ui.com/)
