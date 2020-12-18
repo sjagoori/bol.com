@@ -4,8 +4,8 @@
     <tr>
         <td align="center"><a href="#-live-demo">💻 Live demo<a></td>
         <td align="center"><a href="#-Description">📓 Description<a></td>
-        <td align="center"><a href="#-installation">🤖 Installation<a></td>
-        <td align="center"><a href="#-sources">🤝 Dependencies<a></td>
+        <td align="center"><a href="#-Installation">🤖 Installation<a></td>
+        <td align="center"><a href="#-Dependencies">🤝 Dependencies<a></td>
     </tr>
 </table>
 
