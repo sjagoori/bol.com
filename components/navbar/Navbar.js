@@ -14,12 +14,7 @@ export default class Navbar extends React.Component {
         <div>
           <Icon />
         </div>
-        Bol.com Deals
-        {/* <div>
-          {Object.keys(this.props.links).map((key, index) => {
-            return <Link href={this.props.links[key].url}>{this.props.links[key].label}</Link>
-          })}
-        </div> */}
+        <strong>Bol.com Deals</strong>
         <div>
           <Link href={this.props.cta.url}>{this.props.cta.label}</Link>
         </div>

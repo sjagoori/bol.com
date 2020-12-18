@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import styled, { ThemeProvider } from 'styled-components';
 import theme from '../../styling/theme'
 import Badge from '@material-ui/core/Badge'
