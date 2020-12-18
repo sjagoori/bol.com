@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styled, { ThemeProvider } from 'styled-components';
 import theme from '../styling/theme'
 import Badge from '@material-ui/core/Badge'
+import Button from '../components/Button'
 
 export default class Product extends React.Component {
   constructor(props) {
@@ -22,9 +23,12 @@ export default class Product extends React.Component {
             </Badge>
           </ImageContainer>
 
-          <Link href={{ pathname: '/detail', query: { id: this.props.id } }}>
-            <BuyButton>Bekijk product</BuyButton>
-          </Link>
+          <Button
+            label='bekijk'
+            url='detail'
+            productid={this.props.id}
+            type='secondary'
+          />
         </Container>
 
       </ThemeProvider>
@@ -46,12 +50,12 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  filter: drop-shadow(0px 4px 3px ${props => props.theme.colors.black +'25'});
+  filter: drop-shadow(0px 4px 3px ${props => props.theme.colors.black + '25'});
   transition: .3s;
 
   :hover{
     border: 0;
-    filter: drop-shadow(4px 4px 20px ${props => props.theme.colors.black +'25'});
+    filter: drop-shadow(4px 4px 20px ${props => props.theme.colors.black + '25'});
   }
 `
 
@@ -74,7 +78,7 @@ const Title = styled.span`
 const BuyButton = styled.div`
   cursor: pointer;
   height: 30px;
-  width: 130px;
+  width: 150px;
   padding: 2px;
   padding-left: 20px;
   padding-right: 20px;

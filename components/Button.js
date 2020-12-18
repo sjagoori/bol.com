@@ -9,10 +9,14 @@ export default class Button extends React.Component {
     super(props)
   }
 
+  generateURL(url, productid) {
+    return { pathname: url, query: { id: productid } }
+  }
+
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Link href={this.props.url}>
+        <Link href={this.generateURL(this.props.url, this.props.productid)}>
           <Container type={this.props.type}>
             <Icon />
             <span>{this.props.label}</span>
@@ -31,11 +35,15 @@ const Container = styled.div`
   cursor: pointer;
   display: block;
   width: 150px;
-  height: 50px;
+  height: ${props => {
+    if (props.type == 'primary') return '50px';
+    if (props.type == 'secondary') return '33px';
+  }};
+
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: ${props => {
     if (props.type == 'primary') return props.theme.colors.primary;
     if (props.type == 'secondary') return props.theme.colors.secondary;
