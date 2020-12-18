@@ -19,7 +19,8 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 40px;
-
+  margin-bottom: 40px;
+  
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
