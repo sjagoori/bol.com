@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from 'react'
 import Link from 'next/link'
-import Icon from '../assets/svg/logo'
+import Icon from '../../assets/svg/logo'
 
 export default class Navbar extends React.Component {
   constructor(props) {

@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import styled, { ThemeProvider } from 'styled-components';
-import theme from '../styling/theme'
+import theme from '../../styling/theme'
 import Badge from '@material-ui/core/Badge'
-import Button from '../components/Button'
+import Button from '../button/Button'
 
 export default class Product extends React.Component {
   constructor(props) {

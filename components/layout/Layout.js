@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../styling/theme'
+import theme from '../../styling/theme'
 
 export default function Layout(props) {
   return (

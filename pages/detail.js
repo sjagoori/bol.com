@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import theme from '../styling/theme'
-import Button from '../components/Button'
+import Button from '../components/button/Button'
 
 export default class Detail extends React.Component {
   constructor(props) {
