@@ -23,7 +23,9 @@ Bol.com Deals is a website that finds, and provides deals from [bol.com](https:/
 **Run the project:**
 1. Install dependencies
 `npm install`
-2. Run project
+2. Set API key in .env file
+`echo 'API_KEY={Your_Key' > .env`
+3. Run project
 `npm run dev`
 
 
