@@ -20,7 +20,7 @@ const Container = styled.div`
   grid-column-gap: 20px;
   grid-row-gap: 40px;
   margin-bottom: 40px;
-  
+
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
@@ -33,13 +33,8 @@ const Container = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-  
   body{
-      padding:0;
-      margin:0;
       padding-top: 140px;
       background-color: ${props => props.theme.backgroundColor};
-      font-family: 'Open Sans', sans-serif;
   }
 `;

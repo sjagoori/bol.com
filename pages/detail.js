@@ -22,7 +22,6 @@ export default class Detail extends React.Component {
   render() {
     let view = this.state.state ?
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
         <Container>
 
           <ImageContainer>
@@ -166,14 +165,3 @@ const Image = styled.img`
     max-width: 100%;
   }
 `
-
-
-const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-
-  body{
-    padding:0;
-    margin:0;
-    font-family: 'Open Sans', sans-serif;
-  }
-`;
