@@ -30,5 +30,5 @@ Bol.com Deals is a website that finds, and provides deals from [bol.com](https:/
 ## 🤝 Dependencies
 [React](https://github.com/facebook/react)  
 [NextJS](https://nextjs.org/)   
-[Styled-components](https://styled-components.com/)
+[Styled-components](https://styled-components.com/)   
 [@material-ui/core](https://material-ui.com/)
