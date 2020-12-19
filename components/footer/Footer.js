@@ -13,7 +13,7 @@ export default class Footer extends React.Component {
         <Container>
           <div>
             <h1>Over</h1>
-            <p>Bol.com deals is een website dat deals vindt op de bol.com website. Op deze pagina vindt je de laatste deals en acties!</p>
+            <p>Op Bol.com deals vind je elke dag de nieuwste en leukste deals van bol.com!</p>
           </div>
           <div>
             <p>Made with ❤️ - < a href='https://www.github.com/sjagoori'> Shabier</a> ©{new Date().getFullYear()}</p>
