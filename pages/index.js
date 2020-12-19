@@ -14,8 +14,8 @@ export default class Index extends React.Component {
   }
 
   async componentDidMount() {
-    this.setState({ products: await getProducts('https://bol-helper.herokuapp.com/v1') })
-    localStorage.getItem('postProduct') == null ? this.setProducts() : (JSON.parse(localStorage.getItem('postProduct')), this.setState({ state: true }))
+      this.setState({ products: await getProducts('https://bol-helper.herokuapp.com/v1') })
+      localStorage.getItem('postProduct') == null ? this.setProducts() : (JSON.parse(localStorage.getItem('postProduct')), this.setState({ state: true }))
   }
 
   async setProducts() {
@@ -63,6 +63,9 @@ export default class Index extends React.Component {
 }
 
 const Loader = styled.div`
+  margin-top: 50%;
+  transform: translateY(-50%);
   width: 100%;
+  height: calc(45vh + 140px);
   grid-column: 1 / 4;
 `
