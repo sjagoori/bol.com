@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/navbar/Navbar'
 import Layout from '../components/layout/Layout'
 import Product from '../components/product-card/Product'
+import Footer from '../components/footer/Footer'
 import { getData, getProducts, filterObject } from '../components/utils'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import styled from 'styled-components'
@@ -54,6 +55,8 @@ export default class Index extends React.Component {
         <Layout>
           {this.state.state ? this.generateProducts() : <Loader><LinearProgress color="secondary" /></Loader>}
         </Layout>
+
+        <Footer/>
       </>
     )
   }
